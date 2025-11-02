@@ -1,8 +1,9 @@
 MVP:
 [ ] html parser for rodzic/index
+[ ] acceptance test on the whole html
 [ ] parser should look for
-    # <a title="Liczba nieprzeczytanych wiadomości: 2" href="/wiadomosci" id="icon-wiadomosci"><span class="circle"></span>Wiadomości<a class="button counter">2         </a></a>                    
-    # <a title="Liczba nieprzeczytanych ogłoszeń: 1" href="/ogloszenia" id="icon-ogloszenia"><span class="circle"></span>Ogłoszenia</a>                    <a class="button counter">1         </a>
+    messages
+    announcements
 [ ] if found, should return "new message and/or announcement"
 
 EXTRA1:

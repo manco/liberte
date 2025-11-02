@@ -1,12 +1,8 @@
 import requests
 import json
 import yaml
-
-
-
-                                        
-
-def send_hello_world_post():
+                        
+def run():
     credentials = None
 
     with open('private.yml', 'r') as file:
@@ -28,4 +24,4 @@ def send_hello_world_post():
     print(response.content)
 
 if __name__ == "__main__":
-    send_hello_world_post()
+    run()
