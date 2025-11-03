@@ -26,8 +26,8 @@ def test_finds_new_announcements():
 
 def test_find_new_announcements_and_messages_in_real_html():
     with open('tests/site-with-notifications.html', 'r') as file:
-        input = file.read()   
-        assert liberte.parser.has_new_messages(input) == True
-        assert liberte.parser.has_new_announcements(input) == True  
+        input_html = file.read()   
+        assert liberte.parser.has_new_messages(input_html) == True
+        assert liberte.parser.has_new_announcements(input_html) == True  
 
  
