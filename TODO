@@ -11,5 +11,7 @@ EXTRA1:
 [ ] in addition to headers, whole entity body should be returned
 
 EXTRA2:
+[ ] define requirements.txt
+[ ] deploy on github actions
 [ ] pipe the response to the email or whatsapp
     
