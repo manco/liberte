@@ -8,7 +8,7 @@ MVP (local run):
 
 FF1 (github deployment):
 [x] replace private.yml with env vars
-[ ] define requirements.txt
+[x] define requirements.txt
 [ ] pipeline for build > test > deploy
 [ ] deploy on github actions
 [ ] pipe the response to the email (dedicated)
