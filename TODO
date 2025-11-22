@@ -1,17 +1,21 @@
-MVP:
-[ ] html parser for rodzic/index
-[ ] acceptance test on the whole html
-[ ] parser should look for
+MVP (local run):
+[x] html parser for rodzic/index
+[x] acceptance test on the whole html
+[x] parser should look for
     messages
     announcements
 [ ] if found, should return "new message and/or announcement"
+
+FF1 (github deployment):
+[ ] replace private.yml with env vars
+[ ] define requirements.txt
+[ ] pipeline for build > test > deploy
+[ ] deploy on github actions
+[ ] pipe the response to the email (dedicated)
 
 EXTRA1:
 [ ] should follow to /wiadomosci and/or /ogloszenia if anything new noticed and extract the headers of new entities
 [ ] in addition to headers, whole entity body should be returned
 
-EXTRA2:
-[ ] define requirements.txt
-[ ] deploy on github actions
-[ ] pipe the response to the email or whatsapp
+
     
