@@ -1,17 +1,17 @@
 import requests
-import json
-import yaml
-                        
-def run():
-    credentials = None
+import os
 
-    with open('private.yml', 'r') as file:
-        credentials = yaml.load(file)
+def run():
+    login = os.environ.get('LIBRUS_LOGIN')
+    password = os.environ.get('LIBRUS_PASS')
+
+    if not login or not password:
+        raise ValueError("LIBRUS_LOGIN and LIBRUS_PASS environment variables must be set")
 
     login_data = {
         'action': 'login',
-        'login': credentials.get('login'),
-        'pass': credentials.get('pass')
+        'login': login,
+        'pass': password
     }
     
     session = requests.Session()

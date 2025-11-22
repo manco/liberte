@@ -1,6 +1,3 @@
-Requires a `private.yml` config file with credentials placed in the project root. Expected structure:
-
-```
-login: 'your-login'
-pass: 'your-password'
-```
+Requires the following environment variables to be set:
+- `LIBRUS_LOGIN`: Your Librus login
+- `LIBRUS_PASS`: Your Librus password

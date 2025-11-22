@@ -7,7 +7,7 @@ MVP (local run):
 [ ] if found, should return "new message and/or announcement"
 
 FF1 (github deployment):
-[ ] replace private.yml with env vars
+[x] replace private.yml with env vars
 [ ] define requirements.txt
 [ ] pipeline for build > test > deploy
 [ ] deploy on github actions
