@@ -16,6 +16,8 @@ def run():
     
     if (login_data['login'] == 'DRY_RUN'):
         print("dry run succeeded")
+    elif (login_data['login'] == 'DRY_PRD'):
+        print("dry prd run succeeded")
     else:
         session = requests.Session()
         session.get("https://api.librus.pl/OAuth/Authorization?client_id=46&response_type=code&scope=mydata")
