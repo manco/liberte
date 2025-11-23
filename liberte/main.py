@@ -14,14 +14,17 @@ def run():
         'pass': password
     }
     
-    session = requests.Session()
-    session.get("https://api.librus.pl/OAuth/Authorization?client_id=46&response_type=code&scope=mydata")
-    session.post("https://api.librus.pl/OAuth/Authorization?client_id=46", login_data)
-    session.get("https://api.librus.pl/OAuth/Authorization/2FA?client_id=46")
+    if (login_data['login'] == 'DRY_RUN'):
+        print("dry run succeeded")
+    else:
+        session = requests.Session()
+        session.get("https://api.librus.pl/OAuth/Authorization?client_id=46&response_type=code&scope=mydata")
+        session.post("https://api.librus.pl/OAuth/Authorization?client_id=46", login_data)
+        session.get("https://api.librus.pl/OAuth/Authorization/2FA?client_id=46")
 
-    response = session.get("https://synergia.librus.pl/rodzic/index")
+        response = session.get("https://synergia.librus.pl/rodzic/index")
 
-    print(response.content)
+        print(response.content)
 
 if __name__ == "__main__":
     run()
