@@ -28,3 +28,22 @@ jobs:
       run: |
         pip install pytest
         pytest
+  dry-run:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.13"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run main.py
+      env:
+        LIBRUS_LOGIN: DRY_RUN
+        LIBRUS_PASS: DRY_RUN
+      run: python liberte/main.py
